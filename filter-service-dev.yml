@@ -16,17 +16,17 @@ spring:
     mongodb:
       database: inventory
       uri: mongodb://localhost:27017
-  kafka:
-    consumer:
-      auto-offset-reset: earliest
-      bootstrap-servers: localhost:9092
-      group-id: inventory3
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      properties:
-        spring:
-          json:
-            trusted:
-              packages: '*'
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-    topic:
-      name: rental_topics5
+ kafka:
+        consumer:
+            auto-offset-reset: earliest
+            bootstrap-servers: localhost:9092
+            group-id: filter
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            properties:
+                spring:
+                    json:
+                        trusted:
+                            packages: '*'
+            value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        topic:
+            name: tunahan 
