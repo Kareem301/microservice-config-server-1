@@ -31,7 +31,7 @@ spring:
     consumer:
       auto-offset-reset: earliest
       bootstrap-servers: localhost:9092
-      group-id: inventory3
+      group-id: invoice
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       properties:
         spring:
@@ -40,4 +40,18 @@ spring:
               packages: '*'
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     topic:
-      name: rental_topics5
+      name: tunahan
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
